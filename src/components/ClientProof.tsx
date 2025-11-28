@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const clients = [
   "MICROSOFT", "GOOGLE", "NIKE", "SUPREME", "OFF-WHITE", "TESLA", "SPACEX", "BALENCIAGA"
@@ -8,8 +9,8 @@ const ClientProof: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    if (!window.gsap) return;
-    const gsap = window.gsap;
+    // if (!window.gsap) return;
+    // const gsap = window.gsap;
 
     const ctx = gsap.context(() => {
       gsap.to(".logo-track", {

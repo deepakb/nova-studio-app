@@ -1,15 +1,23 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import Hero from './components/Hero';
-import ProjectGrid from './components/ProjectGrid';
-import Manifesto from './components/Manifesto';
-import ClientProof from './components/ClientProof';
-import Team from './components/Team';
-import ProcessTimeline from './components/ProcessTimeline';
-import Contact from './components/Contact';
+
+// Lazy load below-the-fold components
+const ProjectGrid = lazy(() => import('./components/ProjectGrid'));
+const Manifesto = lazy(() => import('./components/Manifesto'));
+const ClientProof = lazy(() => import('./components/ClientProof'));
+const Team = lazy(() => import('./components/Team'));
+const ProcessTimeline = lazy(() => import('./components/ProcessTimeline'));
+const Contact = lazy(() => import('./components/Contact'));
+
+const LoadingFallback = () => (
+  <div className="w-full h-40 flex items-center justify-center bg-brutal-bg text-brutal-green font-mono animate-pulse">
+    LOADING_MODULE...
+  </div>
+);
 
 const App: React.FC = () => {
-  
+
   // Initialize Smooth Scroll or Global GSAP settings if needed
   useEffect(() => {
     // Force scroll to top on reload
@@ -29,13 +37,16 @@ const App: React.FC = () => {
       </nav>
 
       <Hero />
-      <Manifesto />
-      <ProjectGrid />
-      <ProcessTimeline />
-      <ClientProof />
-      <Team />
-      <Contact />
-      
+
+      <Suspense fallback={<LoadingFallback />}>
+        <Manifesto />
+        <ProjectGrid />
+        <ProcessTimeline />
+        <ClientProof />
+        <Team />
+        <Contact />
+      </Suspense>
+
       {/* Footer Fix:
           pb-24 applies to mobile default.
           md:pb-24 applies to tablet (fixing the visibility issue).
@@ -44,11 +55,11 @@ const App: React.FC = () => {
       <footer className="bg-brutal-green text-black py-12 pb-24 md:pb-32 lg:pb-12 relative z-10">
         <div className="max-w-[1400px] mx-auto px-6">
           <h2 className="font-display text-[15vw] md:text-[12vw] leading-[0.8] font-bold tracking-tighter mb-8">
-            NOVA<br/>STUDIO
+            NOVA<br />STUDIO
           </h2>
           <div className="flex flex-col md:flex-row justify-between items-end border-t border-black pt-6">
             <div className="font-mono text-sm mb-6 md:mb-0">
-              © 2024 ANTI-DESIGN SYSTEMS<br/>
+              © 2024 ANTI-DESIGN SYSTEMS<br />
               SAN FRANCISCO / TOKYO
             </div>
             <div className="flex gap-4 md:gap-8 font-bold text-sm md:text-lg uppercase tracking-wide w-full md:w-auto justify-between md:justify-end">

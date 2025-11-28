@@ -1,19 +1,23 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Manifesto: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    if (!window.gsap || !window.ScrollTrigger) return;
-    const gsap = window.gsap;
-    const ScrollTrigger = window.ScrollTrigger;
-    gsap.registerPlugin(ScrollTrigger);
+    // if (!window.gsap || !window.ScrollTrigger) return;
+    // const gsap = window.gsap;
+    // const ScrollTrigger = window.ScrollTrigger;
+    // gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
       // Parallax text effects
       gsap.utils.toArray('.manifesto-line').forEach((line: any, i) => {
-        gsap.fromTo(line, 
+        gsap.fromTo(line,
           { x: i % 2 === 0 ? -30 : 30, opacity: 0 },
           {
             x: 0,
@@ -56,7 +60,7 @@ const Manifesto: React.FC = () => {
 
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         <div className="flex flex-col space-y-12 md:space-y-16">
-          
+
           <div className="manifesto-line md:ml-[10%]">
             <h2 className="font-display text-4xl sm:text-6xl md:text-8xl font-bold uppercase tracking-tighter hover:text-outline transition-all duration-300">
               Safe is <span className="keyword text-brutal-pink cursor-pointer inline-block">Dangerous</span>.
@@ -75,9 +79,9 @@ const Manifesto: React.FC = () => {
             </p>
           </div>
 
-           <div className="manifesto-line md:self-end md:mr-[10%] mt-8 md:mt-12">
+          <div className="manifesto-line md:self-end md:mr-[10%] mt-8 md:mt-12">
             <h2 className="font-display text-4xl sm:text-6xl md:text-8xl font-bold uppercase tracking-tighter text-left md:text-right">
-              Make them <br/>
+              Make them <br />
               <span className="keyword text-white bg-brutal-pink px-2 md:px-4 text-black cursor-pointer inline-block">Uncomfortable</span>.
             </h2>
           </div>

@@ -1,13 +1,13 @@
 // Adding types for GSAP attached to window via CDN
-export {};
+export { };
 
-declare global {
-  interface Window {
-    gsap: any;
-    ScrollTrigger: any;
-    TextPlugin: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     gsap: any;
+//     ScrollTrigger: any;
+//     TextPlugin: any;
+//   }
+// }
 
 export interface Project {
   id: number;
