@@ -2,6 +2,9 @@
 
 A "God Tier" creative studio portfolio template designed with an **Anti-Design / Neo-Brutalist** aesthetic. This project prioritizes bold typography, kinetic motion, and raw technical interactions over traditional web polish, while maintaining enterprise-grade performance and code quality.
 
+<img width="1847" height="905" alt="image" src="https://github.com/user-attachments/assets/ea6a82e0-a0a4-424d-9c96-4cb7418878e6" />
+
+
 ## 🚀 Live Tech Stack
 
 *   **Framework:** React 19
@@ -101,5 +104,3 @@ Since this is a standard React environment:
 
 1.  `npm install`
 2.  `npm start`
-
-*Note: GSAP is loaded via CDN in `index.html` to ensure immediate access to all plugins without complex build configuration for this template.*
