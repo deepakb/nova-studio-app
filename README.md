@@ -6,7 +6,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-cyan)
 ![Performance](https://img.shields.io/badge/Lighthouse-96%2F100-green)
 
-A **"God Tier"** creative studio portfolio template designed with an **Anti-Design / Neo-Brutalist** aesthetic. This project prioritizes bold typography, kinetic motion, and raw technical interactions over traditional web polish, while maintaining enterprise-grade performance and code quality.
+A **"Production Grade"** creative studio portfolio template designed with an **Anti-Design / Neo-Brutalist** aesthetic. This project prioritizes bold typography, kinetic motion, and raw technical interactions over traditional web polish, while maintaining enterprise-grade performance and code quality.
 
 <img width="1847" height="905" alt="Nova Studio Preview" src="https://github.com/user-attachments/assets/ea6a82e0-a0a4-424d-9c96-4cb7418878e6" />
 
