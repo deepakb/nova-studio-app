@@ -8,7 +8,7 @@
 
 A **"Production Grade"** creative studio portfolio template designed with an **Anti-Design / Neo-Brutalist** aesthetic. This project prioritizes bold typography, kinetic motion, and raw technical interactions over traditional web polish, while maintaining enterprise-grade performance and code quality.
 
-<img width="1847" height="905" alt="Nova Studio Preview" src="https://github.com/user-attachments/assets/ea6a82e0-a0a4-424d-9c96-4cb7418878e6" />
+<img width="1435" height="756" alt="image" src="https://github.com/user-attachments/assets/198241da-8089-4b2b-94a5-0d3c9d377ed3" />
 
 ---
 
