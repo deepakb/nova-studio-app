@@ -123,5 +123,3 @@ Animations are managed via the `useGsap` hook in each component. Tweak `duration
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-*Built by [Nova Studio](https://nova-studio.demo).*
